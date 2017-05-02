@@ -26,7 +26,7 @@ public class CreateSessionSample {
 		CuratorFramework client = CuratorFrameworkFactory.builder()
 				.connectString(CommonFields.hosts)
 				.sessionTimeoutMs(5000)
-				.namespace("base")//项目的命名空间
+				.namespace("base")//projcet namespace
 				.retryPolicy(retryPolicy).build();
 		client.start();
 		Thread.sleep(Integer.MAX_VALUE);

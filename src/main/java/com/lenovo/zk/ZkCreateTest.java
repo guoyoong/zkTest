@@ -19,12 +19,12 @@ public class ZkCreateTest {
 		ZooKeeper zk = new ZooKeeper(hosts, 5000, new ConnWatcher());
 		countDownLatch.await();
 		String path1 = zk.create("/zk-test-ephemeral-", "123".getBytes(), 
-				Ids.OPEN_ACL_UNSAFE, //表明之后对这个节点的任何操作都不受权限控制.
+				Ids.OPEN_ACL_UNSAFE, // 
 				CreateMode.EPHEMERAL);
 		System.out.println("Success create znode:" + path1);
 		
 		String path2 = zk.create("/zk-test-ephemeral-", "123".getBytes(), 
-				Ids.OPEN_ACL_UNSAFE, //表明之后对这个节点的任何操作都不受权限控制.
+				Ids.OPEN_ACL_UNSAFE, // 
 				CreateMode.EPHEMERAL_SEQUENTIAL);
 		System.out.println("Success create znode:" + path2);
 	}

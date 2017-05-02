@@ -11,8 +11,8 @@ import com.lenovo.common.CommonFields;
 public class RecipesMasterSelect {
 
 	/**
-	 * 创建一个根节点,例如/master_select,多台机器同时向该节点创建一个子节点，
-	 *  /master_select/lock 只有一台机器能够创建成功，成为master
+	 * create root node ,eg. /master_select,many machines create nodes same time 
+	 *  /master_select/lock only one machie craete success，become master
 	 */
 	
 	public static String master_path = "/curator_recipes_master_path";
