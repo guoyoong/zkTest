@@ -5,10 +5,6 @@ import java.util.Properties;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 
-import kafka.javaapi.producer.Producer;
-import kafka.producer.KeyedMessage;
-import kafka.producer.ProducerConfig;
-
 public class ProducerDemo {
 	public static void main(String[] args) throws InterruptedException {
 		Properties props = new Properties();

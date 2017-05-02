@@ -3,9 +3,7 @@ package com.lenovo.curator;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
 import org.apache.curator.framework.recipes.leader.LeaderSelector;
-import org.apache.curator.framework.recipes.leader.LeaderSelectorListener;
 import org.apache.curator.framework.recipes.leader.LeaderSelectorListenerAdapter;
-import org.apache.curator.framework.state.ConnectionState;
 import org.apache.curator.retry.ExponentialBackoffRetry;
 
 import com.lenovo.common.CommonFields;
@@ -24,6 +22,7 @@ public class RecipesMasterSelect {
 	
 	public static void main(String[] args) throws InterruptedException {
 		client.start();
+		@SuppressWarnings("resource")
 		LeaderSelector selector = new LeaderSelector(client, master_path, 
 				new LeaderSelectorListenerAdapter() {
 					
